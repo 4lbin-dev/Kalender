@@ -12,6 +12,16 @@ const dummyEvents = {
   6: ["09:30 – Utflykt", "16:00 – Planera veckan"]
 };
 
+const routines = {
+  0: ["Gör rent badrum", "Packa ryggsäck", "Förskola"],
+  1: ["Gör rent badrum", "Gympapåse", "Städning"],
+  2: ["Gör rent badrum", "Läxläsning"],
+  3: ["Gör rent badrum", "Packa matlåda"],
+  4: ["Gör rent badrum", "Handla"],
+  5: ["Gör rent badrum", "Städa barnens rum"],
+  6: ["Gör rent badrum", "Tvätta handdukar", "Våttorka badrumsgolv"]
+};
+
 function App() {
   const today = new Date();
   const monday = new Date(today.setDate(today.getDate() - today.getDay() + 1));
@@ -24,6 +34,7 @@ function App() {
   return (
     <div className="wrapper">
       <h1>Familjens vecka</h1>
+
       <div className="week">
         {days.map((day, i) => (
           <div key={i} className="day">
@@ -35,28 +46,14 @@ function App() {
         ))}
       </div>
 
-      <div className="rutiner">
-        <h2>Vardagsrutiner</h2>
-
-        <h3>🕘 Morgon</h3>
-        <ul>
-          <li>Väcka barn</li>
-          <li>Frukost</li>
-          <li>Påklädning & tandborstning</li>
-          <li>Lämning till förskolan</li>
-        </ul>
-
-        <h3>🌙 Kväll</h3>
-        <ul>
-          <li>Middag</li>
-          <li>Kvällsrutin: pyjamas, tandborstning, saga</li>
-          <li>Läggdags</li>
-        </ul>
-
-        <h3>📅 Veckosysslor</h3>
-        <ul>
-          <li><strong>Söndag:</strong> Tvätta handdukar 🧺</li>
-        </ul>
+      <div className="week routine-row">
+        {days.map((day, i) => (
+          <div key={i} className="day routine-cell">
+            {(routines[i] || []).map((r, j) => (
+              <div key={j} className="routine">{r}</div>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );
