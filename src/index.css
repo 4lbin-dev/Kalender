@@ -41,3 +41,21 @@ h1 {
   background: #2a2a2a;
   color: #f0f0f0;
 }
+.rutiner h3 {
+  margin-top: 1em;
+  font-size: 1.1em;
+  color: #eeeeee;
+}
+
+.rutiner ul {
+  list-style-type: "• ";
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+
+.rutiner li {
+  font-size: 0.95em;
+  color: #dddddd;
+  margin: 0.3em 0;
+}
+

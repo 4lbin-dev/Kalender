@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import './index.css';
 
@@ -34,6 +33,30 @@ function App() {
             ))}
           </div>
         ))}
+      </div>
+
+      <div className="rutiner">
+        <h2>Vardagsrutiner</h2>
+
+        <h3>🕘 Morgon</h3>
+        <ul>
+          <li>Väcka barn</li>
+          <li>Frukost</li>
+          <li>Påklädning & tandborstning</li>
+          <li>Lämning till förskolan</li>
+        </ul>
+
+        <h3>🌙 Kväll</h3>
+        <ul>
+          <li>Middag</li>
+          <li>Kvällsrutin: pyjamas, tandborstning, saga</li>
+          <li>Läggdags</li>
+        </ul>
+
+        <h3>📅 Veckosysslor</h3>
+        <ul>
+          <li><strong>Söndag:</strong> Tvätta handdukar 🧺</li>
+        </ul>
       </div>
     </div>
   );
